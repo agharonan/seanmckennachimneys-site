@@ -1,65 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CI/CD AWS S3</title>
-  </head>
-  <body>
-    <center>
-      <h1>UP AND RUNNING ON AWS S3</h1>
-      <img src="images/aws.svg" alt="awslogo
-    </center>
-    <p id="date"></p>
-    <footer>
-      <center>
-      <a href='https://github.com/agharonan/'>
-        by Noel Mckenna
-      </a>
-        </center>
-    </footer>
-  </body>
-  <style>
-    body {
-      text-align: center;
-      background-color: #f2f2f2;
-    }
+<head>
+	<title>Sean McKenna Chimneys</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap -->
+	<!--	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
+	<link href="css/customstyle.css" rel="stylesheet" media="screen">
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    h1 {
-      color: #333333;
-    }
+	  ga('create', 'UA-64800368-1', 'auto');
+	  ga('send', 'pageview');
 
-    p {
-      font-size: 20px;
-      color: #dd0808;
-      font-weight: 600;
-    }
-    a{
-      text-decoration: none;
-      color: 'green';
-    }
-    footer{
-      background-color: 'black';
-      height: 75px;
-      width: 100%;
-      position: fixed;
-      bottom: 0px;
-    }
-  </style>
-  <script>
-    function getCurrentDateTime() {
-      var currentDateTime = new Date();
-      var formattedDateTime =
-        "Your local datetime is: " + 
-        currentDateTime.toDateString() +
-        ", " +
-        currentDateTime.toLocaleTimeString();
-      return formattedDateTime;
-    }
-    document.getElementById("date").innerHTML = getCurrentDateTime();
+	</script>
 
-    setInterval(function () {
-      document.getElementById("date").innerHTML = getCurrentDateTime();
-    }, 1000);
-  </script>
-</html>
+</head>
+<body id="home">
+	<nav class="navbar-wrapper navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="./index.html">Sean McKenna Chimneys</a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="./index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+				<li><a href="./areasCovered.html"><span class="glyphicon glyphicon-road"></span> Areas Covered</a></li>
+				<li><a href="./ontheroof.html"><span class="glyphicon glyphicon-chevron-up"></span> On The Roof</a></li>
+				<li><a href="./whatweclean.html"><span class="glyphicon glyphicon-fire"></span> What we clean</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="tel:02882840157"><span class="glyphicon glyphicon-earphone"></span> 028 82840157</a></li>
+				<li><a href="tel:07801782479"><span class="glyphicon glyphicon-phone"></span> 07801782479</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div>
+	</nav>
+	<div class="container-fluid">
+		<div class="jumbotron img-rounded">
+			<h2>Sean McKenna Chimney Cleaning</h2>
+			<p>Experienced and Reliable</p>
+			<h4><a class="tel" tabIndex="-1" href="tel:07801782479">Call on 07801782479</a></h4>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<img class="img-responsive img-rounded" src="images/chimney1-square.jpg">
+				<h3 class="text-center"> Over 25 years experience </h3>
+			</div>
+			<div class="col-md-4">
+				<img class="img-responsive img-rounded" src="images/fires/modern/ashleystove-small.jpeg">
+				<h3 class="text-center">Stoves</h3>
+			</div>
+            <div class="col-md-4">
+                <img class="img-responsive img-rounded" src="images/fires/classic/hearth-stone-smaller.jpeg">
+                <h3 class="text-center">Open fires</h3>
+            </div>
+
+		</div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <img class="img-responsive img-rounded" src="images/concrete-fireback.jpg">
+                <h3 class="text-center">Firebacks replaced </h3>
+            </div>
+            <div class="col-md-4">
+                <img class="img-responsive img-rounded" src="images/cage1-square.jpg">
+                <h3 class="text-center">Bird cages fitted</h3>
+            </div>
+
+            <div class="col-md-4">
+                <img class="img-responsive img-rounded" src="images/flue1-square.jpg">
+                <h3 class="text-center">We do flues</h3>
+            </div>
+        </div>
+	</div>
+	<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h3 class="text-center">
+					<span class="glyphicon glyphicon-earphone"></span> 
+					028 82840157
+				</h3>
+			</div>
+			<div class="col-md-6">
+				<h3 class="text-center">
+					<span class="glyphicon glyphicon-phone"></span> 
+					07801782479 
+				</h3>
+			</div>
+		</div>
+	</div>
+	</footer>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/mynavhighlight.js"/>
+</body>
