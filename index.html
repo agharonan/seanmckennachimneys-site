@@ -1,110 +1,206 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Sean McKenna Chimneys</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Bootstrap -->
-	<!--	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
-	<link href="css/customstyle.css" rel="stylesheet" media="screen">
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sean McKenna Chimneys — professional chimney cleaning across Tyrone. Stoves, open fires, solid fuel cookers, bird cages, cowls and pots. Over 25 years experience. Call 07801782479.">
+  <title>Sean McKenna Chimneys | Chimney Cleaning Tyrone</title>
 
-	  ga('create', 'UA-64800368-1', 'auto');
-	  ga('send', 'pageview');
+  <!-- GA4 — replace G-XXXXXXXXXX with your Measurement ID from analytics.google.com -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 
-	</script>
-
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body id="home">
-	<nav class="navbar-wrapper navbar-default navbar-fixed-top" role="navigation">
-	<div class="container">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="./index.html">Sean McKenna Chimneys</a>
-		</div>
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="./index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-				<li><a href="./areasCovered.html"><span class="glyphicon glyphicon-road"></span> Areas Covered</a></li>
-				<li><a href="./ontheroof.html"><span class="glyphicon glyphicon-chevron-up"></span> On The Roof</a></li>
-				<li><a href="./whatweclean.html"><span class="glyphicon glyphicon-fire"></span> What we clean</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="tel:02882840157"><span class="glyphicon glyphicon-earphone"></span> 028 82840157</a></li>
-				<li><a href="tel:07801782479"><span class="glyphicon glyphicon-phone"></span> 07801782479</a></li>
-			</ul>
-		</div><!-- /.navbar-collapse -->
-	</div>
-	</nav>
-	<div class="container-fluid">
-		<div class="jumbotron img-rounded">
-			<h2>Sean McKenna Chimney Cleaning</h2>
-			<p>Experienced and Reliable</p>
-			<h4><a class="tel" tabIndex="-1" href="tel:07801782479">Call on 07801782479</a></h4>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4">
-				<img class="img-responsive img-rounded" src="images/chimney1-square.jpg">
-				<h3 class="text-center"> Over 25 years experience </h3>
-			</div>
-			<div class="col-md-4">
-				<img class="img-responsive img-rounded" src="images/fires/modern/ashleystove-small.jpeg">
-				<h3 class="text-center">Stoves</h3>
-			</div>
-            <div class="col-md-4">
-                <img class="img-responsive img-rounded" src="images/fires/classic/hearth-stone-smaller.jpeg">
-                <h3 class="text-center">Open fires</h3>
-            </div>
+<body>
 
-		</div>
+  <!-- ── HEADER ───────────────────────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">Sean McKenna Chimneys</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#services">What We Clean</a>
+        <a href="#on-the-roof">On The Roof</a>
+        <a href="#areas">Areas Covered</a>
+        <a href="tel:07801782479" class="nav-cta">&#128222; 07801 782479</a>
+      </nav>
+    </div>
+  </header>
 
-        <div class="row">
-            <div class="col-md-4">
-                <img class="img-responsive img-rounded" src="images/concrete-fireback.jpg">
-                <h3 class="text-center">Firebacks replaced </h3>
-            </div>
-            <div class="col-md-4">
-                <img class="img-responsive img-rounded" src="images/cage1-square.jpg">
-                <h3 class="text-center">Bird cages fitted</h3>
-            </div>
+  <!-- ── HERO ─────────────────────────────────────────────────────────── -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Over 25 years experience</p>
+      <h1>Chimney Cleaning<br>Across Tyrone</h1>
+      <p class="hero-sub">Experienced and Reliable</p>
+      <div class="cta-group">
+        <a href="tel:07801782479" class="btn btn-primary">&#128222;&nbsp; Call Now</a>
+        <a href="https://wa.me/447801782479" class="btn btn-whatsapp">&#128172;&nbsp; WhatsApp</a>
+      </div>
+      <p class="hero-numbers">
+        <a href="tel:02882840157">028 82840157</a>
+        &nbsp;&bull;&nbsp;
+        <a href="tel:07801782479">07801 782479</a>
+      </p>
+    </div>
+  </section>
 
-            <div class="col-md-4">
-                <img class="img-responsive img-rounded" src="images/flue1-square.jpg">
-                <h3 class="text-center">We do flues</h3>
-            </div>
+  <!-- ── WHAT WE CLEAN ─────────────────────────────────────────────────── -->
+  <section class="section" id="services">
+    <div class="container">
+      <h2>What We Clean</h2>
+      <p class="section-sub">All types of fires, stoves and solid fuel cookers</p>
+      <div class="grid-3">
+        <div class="card">
+          <img src="images/fires/modern/ashleystove-small.jpeg" alt="Ashley wood burning stove">
+          <div class="card-body">
+            <h3>Stoves</h3>
+          </div>
         </div>
-	</div>
-	<footer>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<h3 class="text-center">
-					<span class="glyphicon glyphicon-earphone"></span> 
-					028 82840157
-				</h3>
-			</div>
-			<div class="col-md-6">
-				<h3 class="text-center">
-					<span class="glyphicon glyphicon-phone"></span> 
-					07801782479 
-				</h3>
-			</div>
-		</div>
-	</div>
-	</footer>
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/mynavhighlight.js"/>
+        <div class="card">
+          <img src="images/fires/fireplaces/hearth-stone.jpg" alt="Stone hearth open fireplace">
+          <div class="card-body">
+            <h3>Open Fires</h3>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/fires/solidfuelcookers/stanley-range.jpg" alt="Stanley solid fuel range cooker">
+          <div class="card-body">
+            <h3>Solid Fuel Cookers</h3>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/concrete-fireback.jpg" alt="Concrete fireback replacement">
+          <div class="card-body">
+            <h3>Firebacks Replaced</h3>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/flue1-square.jpg" alt="Chimney flue">
+          <div class="card-body">
+            <h3>Flues</h3>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/fires/modern/floatingstove.jpg" alt="Modern floating stove installation">
+          <div class="card-body">
+            <h3>All Stove Types</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA BAND ──────────────────────────────────────────────────────── -->
+  <section class="cta-band">
+    <div class="container">
+      <p>Ready to book? Give Sean a call or send a WhatsApp message.</p>
+      <div class="cta-group">
+        <a href="tel:07801782479" class="btn btn-white">&#128222;&nbsp; 07801 782479</a>
+        <a href="https://wa.me/447801782479" class="btn btn-whatsapp">&#128172;&nbsp; WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ON THE ROOF ───────────────────────────────────────────────────── -->
+  <section class="section section-alt" id="on-the-roof">
+    <div class="container">
+      <h2>On The Roof</h2>
+      <p class="section-sub">We supply and fit a range of chimney accessories</p>
+      <div class="grid-3">
+        <div class="card">
+          <img src="images/cage1-square.jpg" alt="Bird cage fitted to chimney pot">
+          <div class="card-body">
+            <h3>Chimney Cages</h3>
+            <p>Keep birds from nesting and blocking your chimney</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/spinning-cowl1-square.jpg" alt="Spinning chimney cowl">
+          <div class="card-body">
+            <h3>Chimney Cowls</h3>
+            <p>Prevent backdraft from wind and smoke coming down</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/chimneypots1-rectangle.jpg" alt="Chimney pots on a rooftop">
+          <div class="card-body">
+            <h3>Chimney Pots</h3>
+            <p>Supply and fitting of all chimney pot types</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── AREAS COVERED ─────────────────────────────────────────────────── -->
+  <section class="section" id="areas">
+    <div class="container">
+      <h2>Areas Covered</h2>
+      <p class="section-sub">Covering a wide area of Tyrone and surrounding areas</p>
+      <div class="areas-layout">
+        <img src="images/map.jpg" alt="Map showing areas covered in County Tyrone" class="areas-map">
+        <div>
+          <ul class="areas-list">
+            <li>Omagh</li>
+            <li>Fintona</li>
+            <li>Dromore</li>
+            <li>Ballygawley</li>
+            <li>Augher</li>
+            <li>Clogher</li>
+            <li>Fivemiletown</li>
+            <li>Aughnacloy</li>
+            <li>Newtownstewart</li>
+            <li>Castlederg</li>
+            <li>Drumquin</li>
+            <li>Carrickmore</li>
+          </ul>
+          <p class="areas-more">…and all the townlands in between</p>
+          <div class="areas-cta">
+            <a href="tel:07801782479" class="btn btn-primary">&#128222;&nbsp; Call to Book</a>
+            <a href="https://wa.me/447801782479" class="btn btn-whatsapp">&#128172;&nbsp; WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-brand">Sean McKenna Chimneys</p>
+      <p class="footer-tagline">Over 25 years experience &mdash; Experienced and Reliable</p>
+      <div class="cta-group footer-cta">
+        <a href="tel:02882840157" class="btn btn-outline">&#128222;&nbsp; 028 82840157</a>
+        <a href="tel:07801782479" class="btn btn-outline">&#128222;&nbsp; 07801 782479</a>
+        <a href="https://wa.me/447801782479" class="btn btn-whatsapp">&#128172;&nbsp; WhatsApp</a>
+      </div>
+      <p class="footer-copy">&copy; 2025 Sean McKenna Chimneys. Tyrone, Northern Ireland.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle — no jQuery needed
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('site-nav');
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('open');
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      toggle.setAttribute('aria-expanded', 'false');
+      nav.classList.remove('open');
+    }));
+  </script>
+
 </body>
+</html>

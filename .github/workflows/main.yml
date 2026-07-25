@@ -1,22 +1,84 @@
-name: deploy static website to AWS-S3
+name: Deploy
 
 on:
   push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
 jobs:
-  deploy:
+
+  # ── Stage 1: Staging on agharonan.com (automatic on push) ────────────
+  staging:
+    name: "Staging → agharonan.com"
     runs-on: ubuntu-latest
-
+    environment:
+      name: staging
+      url: https://agharonan.com
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - name: Set up AWS CLI
-        uses: aws-actions/configure-aws-credentials@v1
+      - uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-access-key-id:     ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-west-1
 
-      - name: Deploy to AWS S3
+      - name: Sync to staging bucket
         run: |
-          aws s3 sync . s3://static-website-with-github-actions --delete
+          aws s3 sync . s3://${{ secrets.STAGING_BUCKET }} \
+            --delete \
+            --exclude '.git/*' \
+            --exclude '.github/*' \
+            --exclude 'readme*' \
+            --exclude 'README*' \
+            --exclude '.gitignore'
+
+      - name: Invalidate staging CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.STAGING_DISTRIBUTION_ID }} \
+            --paths "/*"
+
+  # ── Stage 2: Production on seanmckennachimneys.com (manual approval) ─
+  #
+  #  Before this step runs you will see a "Review deployments" button
+  #  in GitHub Actions. Click it → Approve → production deploys.
+  #
+  #  To enable the approval gate:
+  #    GitHub repo → Settings → Environments → production
+  #    → tick "Required reviewers" → add yourself → Save
+  #
+  production:
+    name: "Production → seanmckennachimneys.com"
+    needs: staging
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://seanmckennachimneys.com
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id:     ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-1
+
+      - name: Sync to production bucket
+        run: |
+          aws s3 sync . s3://seanmckennachimneys.com \
+            --delete \
+            --exclude '.git/*' \
+            --exclude '.github/*' \
+            --exclude 'readme*' \
+            --exclude 'README*' \
+            --exclude '.gitignore'
+
+      - name: Invalidate production CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.PRODUCTION_DISTRIBUTION_ID }} \
+            --paths "/*"
