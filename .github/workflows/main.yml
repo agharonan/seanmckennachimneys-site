@@ -36,12 +36,6 @@ jobs:
             --exclude 'README*' \
             --exclude '.gitignore'
 
-      - name: Invalidate staging CloudFront cache
-        run: |
-          aws cloudfront create-invalidation \
-            --distribution-id ${{ secrets.STAGING_DISTRIBUTION_ID }} \
-            --paths "/*"
-
   # ── Stage 2: Production on seanmckennachimneys.com (manual approval) ─
   #
   #  Before this step runs you will see a "Review deployments" button
