@@ -31,5 +31,5 @@ Never approve production from a branch run. Cancel those runs instead (**Cancel 
 - There is no password. Staging stays out of Google because CloudFront adds a `noindex` header (policy `staging-noindex`), and the address is not linked anywhere. Don't post the link publicly.
 - Staging is a private S3 bucket behind CloudFront.
 - Google Analytics only runs on seanmckennachimneys.com, so staging and local visits are not counted.
-- To add a password again, attach the `staging-basic-auth` CloudFront Function (viewer request) to the staging distribution. The login is in `~/agharonan-staging-login.txt` on Noel's Mac.
+- To add a password, create a CloudFront Function that checks basic auth and attach it (viewer request) to the staging distribution `E34GC33UOU77SA`.
 - Naming pattern for other projects: `<project>-staging.agharonan.com`. The certificate covers `*.agharonan.com`.
