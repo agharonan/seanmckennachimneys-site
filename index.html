@@ -19,135 +19,138 @@
 </head>
 <body>
 
-  <!-- ── HEADER ───────────────────────────────────────────────────────── -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#home">Sean McKenna Chimneys</a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <a class="brand" href="index.html">Sean McKenna Chimneys</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-        <a href="#services">What We Clean</a>
-        <a href="#on-the-roof">On The Roof</a>
-        <a href="#areas">Areas Covered</a>
-        <a href="tel:07801782479" class="nav-cta">&#128222; 07801 782479</a>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="whatweclean.html">What We Clean</a>
+        <a href="ontheroof.html">On The Roof</a>
+        <a href="areasCovered.html">Areas Covered</a>
+        <a href="tel:07801782479" class="nav-cta"><svg width="16" height="16" style="vertical-align:-2px;fill:currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1z"/></svg> 07801 782479</a>
       </nav>
     </div>
   </header>
 
-  <!-- ── HERO ─────────────────────────────────────────────────────────── -->
   <section class="hero" id="home">
-    <div class="hero-content">
-      <p class="hero-eyebrow">Over 25 years experience</p>
-      <h1>Chimney Cleaning<br>Across Tyrone</h1>
-      <p class="hero-sub">Experienced and Reliable</p>
-      <div class="cta-group">
-        <a href="tel:07801782479" class="btn btn-primary">&#128222;&nbsp; Call Now</a>
-        <a href="https://wa.me/447801782479" class="btn btn-whatsapp">&#128172;&nbsp; WhatsApp</a>
+    <div class="container hero-inner">
+      <div>
+        <p class="hero-eyebrow">Over 25 years experience</p>
+        <h1>Chimney Cleaning Across Tyrone</h1>
+        <p class="hero-sub">Experienced and Reliable</p>
+        <div class="cta-group"><a href="tel:07801782479" class="btn btn-call"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1z"/></svg> Call 07801 782479</a><a href="https://wa.me/447801782479" class="btn btn-whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.25.7-1.4 1.3-1.95 1.35-.5.05-1.1.07-1.8-.12-.4-.13-.95-.3-1.6-.6-2.8-1.2-4.6-4-4.75-4.2-.13-.2-1.1-1.45-1.1-2.8s.7-2 .95-2.25c.25-.27.55-.33.73-.33h.5c.17 0 .4-.05.6.45.25.55.8 1.9.87 2.05.07.13.1.3 0 .5-.1.2-.15.32-.3.5s-.3.37-.43.5c-.15.15-.3.3-.13.6.17.3.75 1.25 1.6 2 1.1.98 2 1.28 2.3 1.43.3.15.47.12.65-.07.17-.2.75-.88.95-1.18.2-.3.4-.25.67-.15.27.1 1.7.8 2 .95.3.15.5.22.57.35.07.12.07.7-.18 1.4z"/></svg> WhatsApp</a></div>
+        <p class="phone-note">Landline: <a href="tel:02882840157">028 82840157</a></p>
       </div>
-      <p class="hero-numbers">
-        <a href="tel:02882840157">028 82840157</a>
-        &nbsp;&bull;&nbsp;
-        <a href="tel:07801782479">07801 782479</a>
-      </p>
+      <div class="hero-photo">
+        <img src="images/chimney1-square.jpg" alt="Chimney stack and pots against the sky">
+      </div>
     </div>
   </section>
 
-  <!-- ── WHAT WE CLEAN ─────────────────────────────────────────────────── -->
-  <section class="section" id="services">
+  <div class="trust">
+    <div class="container">
+      <ul>
+        <li>Over 25 years experience</li>
+        <li>Stoves, open fires &amp; cookers</li>
+        <li>Covering all of Tyrone</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <section class="section">
     <div class="container">
       <h2>What We Clean</h2>
       <p class="section-sub">All types of fires, stoves and solid fuel cookers</p>
       <div class="grid-3">
         <div class="card">
-          <img src="images/fires/modern/ashleystove-small.jpeg" alt="Ashley wood burning stove">
+          <img src="images/fires/modern/ashleystove-small.jpeg" alt="Wood burning stove" loading="lazy">
           <div class="card-body">
             <h3>Stoves</h3>
           </div>
         </div>
         <div class="card">
-          <img src="images/fires/fireplaces/hearth-stone.jpg" alt="Stone hearth open fireplace">
+          <img src="images/fires/classic/hearth-stone-smaller.jpeg" alt="Stone hearth open fire" loading="lazy">
           <div class="card-body">
             <h3>Open Fires</h3>
           </div>
         </div>
         <div class="card">
-          <img src="images/fires/solidfuelcookers/stanley-range.jpg" alt="Stanley solid fuel range cooker">
+          <img src="images/fires/solidfuelcookers/stanley-range.jpg" alt="Stanley solid fuel range cooker" loading="lazy">
           <div class="card-body">
             <h3>Solid Fuel Cookers</h3>
           </div>
         </div>
         <div class="card">
-          <img src="images/concrete-fireback.jpg" alt="Concrete fireback replacement">
+          <img src="images/concrete-fireback.jpg" alt="Concrete fireback" loading="lazy">
           <div class="card-body">
             <h3>Firebacks Replaced</h3>
           </div>
         </div>
         <div class="card">
-          <img src="images/flue1-square.jpg" alt="Chimney flue">
+          <img src="images/cage1-square.jpg" alt="Bird cage fitted to a chimney pot" loading="lazy">
           <div class="card-body">
-            <h3>Flues</h3>
+            <h3>Bird Cages Fitted</h3>
           </div>
         </div>
         <div class="card">
-          <img src="images/fires/modern/floatingstove.jpg" alt="Modern floating stove installation">
+          <img src="images/flue1-square.jpg" alt="Chimney flue" loading="lazy">
           <div class="card-body">
-            <h3>All Stove Types</h3>
+            <h3>We Do Flues</h3>
           </div>
         </div>
       </div>
+      <a class="more-link" href="whatweclean.html">See more of what we clean &rarr;</a>
     </div>
   </section>
 
-  <!-- ── CTA BAND ──────────────────────────────────────────────────────── -->
   <section class="cta-band">
     <div class="container">
       <p>Ready to book? Give Sean a call or send a WhatsApp message.</p>
-      <div class="cta-group">
-        <a href="tel:07801782479" class="btn btn-white">&#128222;&nbsp; 07801 782479</a>
-        <a href="https://wa.me/447801782479" class="btn btn-whatsapp">&#128172;&nbsp; WhatsApp</a>
-      </div>
+      <div class="cta-group cta-center"><a href="tel:07801782479" class="btn btn-call"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1z"/></svg> Call 07801 782479</a><a href="https://wa.me/447801782479" class="btn btn-whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.25.7-1.4 1.3-1.95 1.35-.5.05-1.1.07-1.8-.12-.4-.13-.95-.3-1.6-.6-2.8-1.2-4.6-4-4.75-4.2-.13-.2-1.1-1.45-1.1-2.8s.7-2 .95-2.25c.25-.27.55-.33.73-.33h.5c.17 0 .4-.05.6.45.25.55.8 1.9.87 2.05.07.13.1.3 0 .5-.1.2-.15.32-.3.5s-.3.37-.43.5c-.15.15-.3.3-.13.6.17.3.75 1.25 1.6 2 1.1.98 2 1.28 2.3 1.43.3.15.47.12.65-.07.17-.2.75-.88.95-1.18.2-.3.4-.25.67-.15.27.1 1.7.8 2 .95.3.15.5.22.57.35.07.12.07.7-.18 1.4z"/></svg> WhatsApp</a></div>
     </div>
   </section>
 
-  <!-- ── ON THE ROOF ───────────────────────────────────────────────────── -->
-  <section class="section section-alt" id="on-the-roof">
+  <section class="section section-alt">
     <div class="container">
       <h2>On The Roof</h2>
       <p class="section-sub">We supply and fit a range of chimney accessories</p>
       <div class="grid-3">
         <div class="card">
-          <img src="images/cage1-square.jpg" alt="Bird cage fitted to chimney pot">
+          <img src="images/cage1-square.jpg" alt="Bird cage fitted to a chimney pot" loading="lazy">
           <div class="card-body">
             <h3>Chimney Cages</h3>
-            <p>Keep birds from nesting and blocking your chimney</p>
+          <p>Keep birds from nesting and blocking your chimney</p>
           </div>
         </div>
         <div class="card">
-          <img src="images/spinning-cowl1-square.jpg" alt="Spinning chimney cowl">
+          <img src="images/spinning-cowl1-square.jpg" alt="Spinning chimney cowl" loading="lazy">
           <div class="card-body">
             <h3>Chimney Cowls</h3>
-            <p>Prevent backdraft from wind and smoke coming down</p>
+          <p>Help prevent backdraft from wind and smoke coming down</p>
           </div>
         </div>
         <div class="card">
-          <img src="images/chimneypots1-rectangle.jpg" alt="Chimney pots on a rooftop">
+          <img src="images/chimneypots1-rectangle.jpg" alt="Chimney pots on a rooftop" loading="lazy">
           <div class="card-body">
             <h3>Chimney Pots</h3>
-            <p>Supply and fitting of all chimney pot types</p>
+          <p>Supply and fitting of chimney pots</p>
           </div>
         </div>
       </div>
+      <a class="more-link" href="ontheroof.html">More on chimney accessories &rarr;</a>
     </div>
   </section>
 
-  <!-- ── AREAS COVERED ─────────────────────────────────────────────────── -->
-  <section class="section" id="areas">
+  <section class="section">
     <div class="container">
       <h2>Areas Covered</h2>
-      <p class="section-sub">Covering a wide area of Tyrone and surrounding areas</p>
+      <p class="section-sub">We cover a wide area of Tyrone</p>
       <div class="areas-layout">
-        <img src="images/map.jpg" alt="Map showing areas covered in County Tyrone" class="areas-map">
+        <img src="images/map.jpg" alt="Map showing areas covered in County Tyrone" class="areas-map" loading="lazy">
         <div>
           <ul class="areas-list">
             <li>Omagh</li>
@@ -163,32 +166,33 @@
             <li>Drumquin</li>
             <li>Carrickmore</li>
           </ul>
-          <p class="areas-more">…and all the townlands in between</p>
-          <div class="areas-cta">
-            <a href="tel:07801782479" class="btn btn-primary">&#128222;&nbsp; Call to Book</a>
-            <a href="https://wa.me/447801782479" class="btn btn-whatsapp">&#128172;&nbsp; WhatsApp</a>
-          </div>
+          <p class="areas-more">&hellip;and all the townlands in between</p>
+          <div class="cta-group"><a href="tel:07801782479" class="btn btn-blue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1z"/></svg> Call to Book</a><a href="https://wa.me/447801782479" class="btn btn-whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.25.7-1.4 1.3-1.95 1.35-.5.05-1.1.07-1.8-.12-.4-.13-.95-.3-1.6-.6-2.8-1.2-4.6-4-4.75-4.2-.13-.2-1.1-1.45-1.1-2.8s.7-2 .95-2.25c.25-.27.55-.33.73-.33h.5c.17 0 .4-.05.6.45.25.55.8 1.9.87 2.05.07.13.1.3 0 .5-.1.2-.15.32-.3.5s-.3.37-.43.5c-.15.15-.3.3-.13.6.17.3.75 1.25 1.6 2 1.1.98 2 1.28 2.3 1.43.3.15.47.12.65-.07.17-.2.75-.88.95-1.18.2-.3.4-.25.67-.15.27.1 1.7.8 2 .95.3.15.5.22.57.35.07.12.07.7-.18 1.4z"/></svg> WhatsApp</a></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── FOOTER ────────────────────────────────────────────────────────── -->
   <footer class="site-footer">
     <div class="container">
       <p class="footer-brand">Sean McKenna Chimneys</p>
       <p class="footer-tagline">Over 25 years experience &mdash; Experienced and Reliable</p>
-      <div class="cta-group footer-cta">
-        <a href="tel:02882840157" class="btn btn-outline">&#128222;&nbsp; 028 82840157</a>
-        <a href="tel:07801782479" class="btn btn-outline">&#128222;&nbsp; 07801 782479</a>
-        <a href="https://wa.me/447801782479" class="btn btn-whatsapp">&#128172;&nbsp; WhatsApp</a>
+      <div class="cta-group cta-center">
+        <a href="tel:02882840157" class="btn btn-outline"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1z"/></svg> Call 028 82840157</a>
+        <a href="tel:07801782479" class="btn btn-outline"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1z"/></svg> Call 07801 782479</a>
+        <a href="https://wa.me/447801782479" class="btn btn-whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.25.7-1.4 1.3-1.95 1.35-.5.05-1.1.07-1.8-.12-.4-.13-.95-.3-1.6-.6-2.8-1.2-4.6-4-4.75-4.2-.13-.2-1.1-1.45-1.1-2.8s.7-2 .95-2.25c.25-.27.55-.33.73-.33h.5c.17 0 .4-.05.6.45.25.55.8 1.9.87 2.05.07.13.1.3 0 .5-.1.2-.15.32-.3.5s-.3.37-.43.5c-.15.15-.3.3-.13.6.17.3.75 1.25 1.6 2 1.1.98 2 1.28 2.3 1.43.3.15.47.12.65-.07.17-.2.75-.88.95-1.18.2-.3.4-.25.67-.15.27.1 1.7.8 2 .95.3.15.5.22.57.35.07.12.07.7-.18 1.4z"/></svg> WhatsApp</a>
       </div>
       <p class="footer-copy">&copy; 2025 Sean McKenna Chimneys. Tyrone, Northern Ireland.</p>
     </div>
   </footer>
 
+  <!-- Sticky tap-to-call bar (mobile only) -->
+  <div class="call-bar">
+    <a href="tel:07801782479" class="btn btn-call"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1z"/></svg> Call Sean</a>
+    <a href="https://wa.me/447801782479" class="btn btn-whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.25.7-1.4 1.3-1.95 1.35-.5.05-1.1.07-1.8-.12-.4-.13-.95-.3-1.6-.6-2.8-1.2-4.6-4-4.75-4.2-.13-.2-1.1-1.45-1.1-2.8s.7-2 .95-2.25c.25-.27.55-.33.73-.33h.5c.17 0 .4-.05.6.45.25.55.8 1.9.87 2.05.07.13.1.3 0 .5-.1.2-.15.32-.3.5s-.3.37-.43.5c-.15.15-.3.3-.13.6.17.3.75 1.25 1.6 2 1.1.98 2 1.28 2.3 1.43.3.15.47.12.65-.07.17-.2.75-.88.95-1.18.2-.3.4-.25.67-.15.27.1 1.7.8 2 .95.3.15.5.22.57.35.07.12.07.7-.18 1.4z"/></svg> WhatsApp</a>
+  </div>
+
   <script>
-    // Mobile nav toggle — no jQuery needed
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.getElementById('site-nav');
     toggle.addEventListener('click', () => {
@@ -196,10 +200,6 @@
       toggle.setAttribute('aria-expanded', String(!open));
       nav.classList.toggle('open');
     });
-    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      toggle.setAttribute('aria-expanded', 'false');
-      nav.classList.remove('open');
-    }));
   </script>
 
 </body>
