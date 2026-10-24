@@ -7,12 +7,18 @@
   <title>Areas Covered | Sean McKenna Chimneys</title>
 
   <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G8D5KGH562"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-G8D5KGH562');
+    // Only track the live site, not staging or local previews
+    if (/^(www\.)?seanmckennachimneys\.com$/.test(location.hostname)) {
+      var ga = document.createElement('script');
+      ga.async = true;
+      ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-G8D5KGH562';
+      document.head.appendChild(ga);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-G8D5KGH562');
+    }
   </script>
 
   <link rel="stylesheet" href="css/style.css">

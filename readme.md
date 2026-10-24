@@ -1,28 +1,35 @@
-# Upload to s3 bucket instructions
+# Sean McKenna Chimneys website
 
-## Location
+Plain static site (HTML, CSS, images). Deployed to AWS with GitHub Actions.
 
-/home/nmk/dev/web/chimneysite/dev
+| Environment | Address | Access |
+|---|---|---|
+| Staging | https://seanmckennachimneys-staging.agharonan.com | Open to anyone with the link, hidden from search engines |
+| Production | https://seanmckennachimneys.com | Public |
 
 ## Test locally
 
-~/dev/web/chimneysite/dev $  ```python -m http.server 8080```
-
-## Add and commit changes in git
-
-```git add```
-```git commit -m "message"```
-
-## To upload to Amazon s3
-
-```aws s3 sync --dryrun --exclude '.git/*' --exclude '.gitignore' --exclude '.idea/*' --exclude 'readme*' . s3://seanmckennachimneys.com```
-
-```aws s3 sync --exclude '.git/*' --exclude '.gitignore' --exclude '.idea/*' --exclude 'readme*' . s3://seanmckennachimneys.com```
-
-## To ensure changes get pushed out - cloudfront invalidation
-
 ```bash
-CDN_DISTRIBUTION_ID=E34826E0PUSE12
-aws cloudfront create-invalidation --distribution-id $CDN_DISTRIBUTION_ID --paths "/areasCovered.html"
-aws cloudfront create-invalidation --distribution-id $CDN_DISTRIBUTION_ID --paths "/index.html"
+python3 -m http.server 8080
 ```
+
+Then open http://localhost:8080
+
+## Release a change
+
+1. Create a branch, commit your changes, push, and open a PR.
+2. To try it on staging before merging: GitHub, **Actions**, **Deploy**, **Run workflow**, choose your branch.
+3. Open the staging address above and check it on a phone and a desktop.
+4. Merge the PR. The Deploy workflow runs on `main`, updates staging, then waits.
+5. In the run, click **Review deployments**, tick **production**, then **Approve and deploy**.
+6. Check https://seanmckennachimneys.com. Hard refresh if you still see the old version.
+
+Never approve production from a branch run. Cancel those runs instead (**Cancel workflow** on the run page).
+
+## Staging notes
+
+- There is no password. Staging stays out of Google because CloudFront adds a `noindex` header (policy `staging-noindex`), and the address is not linked anywhere. Don't post the link publicly.
+- Staging is a private S3 bucket behind CloudFront.
+- Google Analytics only runs on seanmckennachimneys.com, so staging and local visits are not counted.
+- To add a password again, attach the `staging-basic-auth` CloudFront Function (viewer request) to the staging distribution. The login is in `~/agharonan-staging-login.txt` on Noel's Mac.
+- Naming pattern for other projects: `<project>-staging.agharonan.com`. The certificate covers `*.agharonan.com`.
