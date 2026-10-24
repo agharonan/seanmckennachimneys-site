@@ -10,13 +10,13 @@ permissions:
 
 jobs:
 
-  # ── Stage 1: Staging on agharonan.com (automatic on push) ────────────
+  # ── Stage 1: Staging on seanmckennachimneys-staging.agharonan.com (automatic on push) ─────────────
   staging:
-    name: "Staging → agharonan.com"
+    name: "Staging → seanmckennachimneys-staging.agharonan.com"
     runs-on: ubuntu-latest
     environment:
       name: staging
-      url: https://agharonan.com
+      url: https://seanmckennachimneys-staging.agharonan.com
     steps:
       - uses: actions/checkout@v4
 
